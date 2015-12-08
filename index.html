@@ -1,12 +1,29 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Hello World!</title>
-  </head>
-  <body>
-    <h1>Hello World!</h1>
-    We are using node <script>document.write(process.versions.node)</script>,
-    Chrome <script>document.write(process.versions.chrome)</script>,
-    and Electron <script>document.write(process.versions.electron)</script>.
-  </body>
+<head>
+  <title>Wallpaper Explorer</title>
+</head>
+<body>
+  <div id="react-root"></div>
+  <script>
+  var remote = require('remote').require('./main');
+
+  // Trigger the remote function setWallpaper in main process to set
+  // wallpaper with the image in the url.
+  function setWallpaper(url) {
+    remote.setWallpaper(url);
+  }
+
+  // On DEV, we want to use the localhost for hotloading.
+  var bundlePath = './build/bundle.js';
+  if(typeof process !== 'undefined' && process.env.ENVIRONMENT === 'DEV') {
+    bundlePath = 'http://localhost:8080/build/bundle.js';
+  }
+  var bundleScriptEl = document.createElement('script');
+  bundleScriptEl.src = bundlePath;
+  document.currentScript.parentNode.insertBefore(bundleScriptEl, document.currentScript);
+
+  </script>
+</body>
 </html>

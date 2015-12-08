@@ -1,0 +1,140 @@
+html, body {
+  margin: 0;
+  height: 100%;
+}
+
+.react-lightbox {
+
+}
+
+.react-lightbox-image {
+  float: left;
+  width: 92px;
+  height: 92px;
+  background-size: cover;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.react-lightbox-overlay {
+  position: fixed;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(ellipse at center, rgba(25,25,25,1) 0%,rgba(25,25,25,0.60) 100%);
+  transition: opacity 0.1s ease-in-out;
+}
+
+.react-lightbox-overlay-open {
+  opacity: 1;
+}
+
+.react-lightbox-carousel-image {
+  position: absolute;
+  max-width: 50%;
+  max-height: 100%;
+  top:0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto auto auto auto;
+  background-size: cover;
+  transition: opacity 0.25s ease-in;
+  opacity: 1;
+  box-shadow: 0 0 40px rgba(25, 25, 25, 0.5);
+  z-index: 1;
+}
+
+.react-lightbox-carousel-image:hover {
+  -webkit-filter: brightness(110%);
+}
+
+.react-lightbox-carousel-image-darken {
+  -webkit-filter: brightness(50%);
+}
+
+.react-lightbox-carousel-image-hidden {
+  opacity: 0;
+  z-index: 0;
+}
+
+.react-lightbox-carousel-hot-spot {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  top:0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto auto auto auto;
+  display: block;
+  z-index: 1;
+}
+
+.react-lightbox-carousel-instruction {
+  position: absolute;
+  top:55%;
+  color: #EEEEEE;
+  text-align: center;
+  font-size: 1.2em;
+  left: 0;
+  right: 0;
+  margin: 0 auto auto auto;
+  display: none;
+  z-index: 1;
+}
+
+.react-lightbox-carousel-instruction-show {
+  display: block!important;
+}
+
+.react-lightbox-carousel-title {
+  position: absolute;
+  top:90%;
+  color: #EEEEEE;
+  text-align: center;
+  font-size: 1.5em;
+  left: 0;
+  right: 0;
+  margin: 0 auto auto auto;
+  opacity: 1;
+  z-index: 1;
+}
+
+.my-controls {
+  position: absolute;
+  width: 70%;
+  height: 100px;
+  text-align: center;
+  top:0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  z-index: 0;
+}
+.my-button {
+  font-size: 24px;
+  background-color: #EAEAEA;
+  border-radius: 50%;
+  width: 50px;
+  line-height: 50px;
+  height: 50px;
+  color: #333;
+  cursor: pointer;
+  font-weight: bold;
+  font-family: 'Arial Black';
+  opacity: 0.8;
+  z-index: 1;
+}
+.my-button:hover {
+  background-color: #FFF;
+}
+.my-button-left {
+  float: left;
+}
+.my-button-right {
+  float: right;
+}
