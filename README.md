@@ -1,6 +1,6 @@
 # electron-wallpaper-explorer
 
-**Simple electron app to explore newest wallpaper from alphacoders.com and select any of them as your wallpaper with one click.**
+**Simple electron app to open dialogs per request from external app through IPC**
 
 This is a minimal Electron application based on the [Quick Start Guide](http://electron.atom.io/docs/latest/tutorial/quick-start) within the Electron documentation.
 
