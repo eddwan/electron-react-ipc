@@ -7,13 +7,7 @@
 <body>
   <div id="react-root"></div>
   <script>
-  var remote = require('remote').require('./main');
-
-  // Trigger the remote function setWallpaper in main process to set
-  // wallpaper with the image in the url.
-  function setWallpaper(url) {
-    remote.setWallpaper(url);
-  }
+  const ipcRenderer = require('electron').ipcRenderer;
 
   // On DEV, we want to use the localhost for hotloading.
   var bundlePath = './build/bundle.js';

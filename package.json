@@ -7,7 +7,7 @@
     "start": "ENVIRONMENT=DEV electron main.js",
     "build": "./node_modules/.bin/webpack --display-error-details",
     "watch": "./node_modules/.bin/webpack-dev-server --hot --inline",
-    "osx-package": "./node_modules/.bin/webpack -p && ./node_modules/electron-packager/cli.js ./ WallpaperExplorer --out ./bin --platform=darwin --arch=x64 --version=0.34.1 --overwrite --ignore=\"ignore|bin|node_modules/(babel.*|jquery|.*loader|react.*|electron.*)\""
+    "osx-package": "./node_modules/.bin/webpack -p && ./node_modules/electron-packager/cli.js ./ WallpaperExplorer --out ./bin --platform=darwin --arch=x64 --version=0.36.0 --overwrite --ignore=\"ignore|bin|node_modules/(babel.*|jquery|.*loader|react.*|electron.*)\""
   },
   "repository": {
     "type": "git",
@@ -26,24 +26,20 @@
   },
   "homepage": "https://github.com/atom/electron-quick-start#readme",
   "devDependencies": {
-    "applescript": "^1.0.0",
     "babel": "^5.6.10",
     "babel-core": "^5.6.11",
     "babel-loader": "^5.2.2",
     "css-loader": "^0.18.0",
     "electron-packager": "^5.1.1",
-    "electron-prebuilt": "^0.34.1",
+    "electron-prebuilt": "^0.36.0",
     "jquery": "^2.1.4",
     "jsx-loader": "^0.13.2",
+    "node-ipc": "^5.2.0",
     "node-sass": "^3.4.2",
     "react": "^0.14.3",
-    "react-addons-linked-state-mixin": "^0.14.3",
     "react-dom": "^0.14.3",
-    "react-images": "^0.2.1",
-    "react-swipeable": "^3.0.2",
     "sass-loader": "^3.1.2",
     "style-loader": "^0.13.0",
-    "temporary": "0.0.8",
     "webpack": "^1.12.9",
     "webpack-dev-server": "^1.14.0"
   }
